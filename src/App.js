@@ -1,16 +1,30 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Page/Home';
-import Following from './Page/Following';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { publicRouter } from '~/prowserRouter';
+import { DefaultLayout } from '~/component/Layout';
+import { Fragment } from 'react';
 function App() {
     return (
-        <Router>
+        <BrowserRouter>
             <div className="App">
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/following" element={<Following />} />
+                    {publicRouter.map((router, index) => {
+                        const Layout = router.Layout === null ? Fragment : DefaultLayout;
+                        const Page = router.component;
+                        return (
+                            <Route
+                                key={index}
+                                path={router.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
+                        );
+                    })}
                 </Routes>
             </div>
-        </Router>
+        </BrowserRouter>
     );
 }
 
