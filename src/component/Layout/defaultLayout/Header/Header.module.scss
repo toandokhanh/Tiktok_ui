@@ -30,7 +30,7 @@
         border: none;
         background-color: transparent;
         outline: none;
-        padding: 12px 0;
+        padding: 14px 0;
         caret-color: var(--primary);
         font-weight: 400;
         font-size: 1.6rem;
@@ -39,15 +39,27 @@
     }
 }
 
-.clear__btn,
-.loading__btn {
+.clear__btn {
     border: none;
     position: absolute;
-    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 57px;
+    opacity: 0.5;
 }
 
 .search__btn {
     border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    padding: 7px 10px;
+    // width: 30px;
+    font-size: 15px;
+    opacity: 0.6;
+    // height: 0px;
+    border-left: 1px solid #ccc;
 }
 //3
 .actions {
