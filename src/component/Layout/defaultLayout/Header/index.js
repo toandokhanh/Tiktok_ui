@@ -1,7 +1,8 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faMessage } from '@fortawesome/free-regular-svg-icons';
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -82,7 +83,7 @@ function Header() {
                 </div>
                 <div className={cx('search')}>
                     <input placeholder="Tìm kiếm tài khoản và video" spellCheck={false} />
-                    <button className={cx('clear__btn')}>
+                    <button hidden className={cx('clear__btn')}>
                         <FontAwesomeIcon icon={faCircleXmark} />
                     </button>
                     {/* <button className={cx('loading__btn')}>
@@ -92,7 +93,25 @@ function Header() {
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
                 </div>
-                <div className={cx('actions')}>use</div>
+                <div className={cx('actions')}>
+                    <button className={cx('upload')}>
+                        <FontAwesomeIcon icon={faPlus} />
+                        <span>Tải lên</span>
+                    </button>
+                    <div className={cx('message')}>
+                        <FontAwesomeIcon icon={faPaperPlane} />
+                    </div>
+                    <div className={cx('notification')}>
+                        <FontAwesomeIcon icon={faMessage} />
+                    </div>
+                    <div className={cx('account')}>
+                        {/* <img
+                            width="20px"
+                            src="https://p9-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/0302e3c5385a6bf7be31b8cf89c3d414.jpeg?x-expires=1661688000&x-signature=LHV2xNmNf%2BbEPjZzJKaXPXgVxIg%3D"
+                            alt="avata"
+                        /> */}
+                    </div>
+                </div>
             </div>
         </header>
     );

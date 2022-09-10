@@ -54,13 +54,61 @@
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    padding: 7px 10px;
+    padding: 12px 12px;
+    // height: 100%;
+    // width: 40px;
     // width: 30px;
     font-size: 15px;
     opacity: 0.6;
     // height: 0px;
-    border-left: 1px solid #ccc;
+    // border-left: 1px solid #ccc;
+
+    cursor: pointer;
+    background-color: #29294a;
+    border-end-start-radius: 92px;
+    // :hover {
+    // }
 }
 //3
 .actions {
+    display: flex;
+    height: 100%;
+    padding: 13px 5px;
+    .upload {
+        padding: 6px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+
+        span {
+            margin-left: 4px;
+        }
+    }
+    .message {
+        font-size: 20px;
+        padding-top: 5px;
+    }
+
+    .notification {
+        font-size: 20px;
+        padding-top: 5px;
+    }
+    .account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(https://p9-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/0302e3c5385a6bf7be31b8cf89c3d414.jpeg?x-expires=1661688000&x-signature=LHV2xNmNf%2BbEPjZzJKaXPXgVxIg%3D);
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        margin: 4px 10px;
+    }
+    .upload,
+    .message,
+    .notification {
+        margin: 0 12px;
+    }
 }
